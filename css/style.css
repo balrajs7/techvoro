@@ -632,40 +632,43 @@ ul {
     gap: 2rem;
 }
 
+.subpage-why-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+@media (max-width: 992px) {
+    .subpage-why-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .subpage-why-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 .why-card {
     padding: 2rem;
     position: relative;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, max-height 0.5s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
-    cursor: pointer;
 }
 
 .why-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 40px rgba(0,0,0,0.6), inset 0 0 20px rgba(16, 185, 129, 0.15);
-    background: rgba(255, 255, 255, 0.05);
-}
-
-.expanded-content {
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: max-height 0.5s cubic-bezier(0, 1, 0, 1), opacity 0.3s ease;
-}
-
-.why-card.active .expanded-content {
-    max-height: 500px;
-    opacity: 1;
-    transition: max-height 0.5s ease-in-out, opacity 0.5s ease;
-    margin-top: 1rem;
 }
 
 .feature-list {
     list-style: none;
     padding: 0;
     margin: 0;
+    margin-top: 1rem;
     border-top: 1px solid rgba(16, 185, 129, 0.2);
     padding-top: 1rem;
 }
@@ -684,37 +687,6 @@ ul {
     left: 0;
     color: var(--accent-color);
     font-weight: bold;
-}
-
-.read-more-btn {
-    background: transparent;
-    border: 1px solid rgba(16, 185, 129, 0.3);
-    color: var(--accent-color);
-    padding: 0.6rem 1.2rem;
-    border-radius: 30px;
-    cursor: pointer;
-    margin-top: 1.5rem;
-    font-size: 0.85rem;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    align-self: flex-start;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.read-more-btn:hover {
-    background: rgba(16, 185, 129, 0.1);
-    border-color: var(--accent-color);
-    transform: scale(1.05);
-}
-
-.btn-arrow {
-    transition: transform 0.3s ease;
-}
-
-.why-card.active .btn-arrow {
-    transform: rotate(180deg);
 }
 
 .why-card::before {

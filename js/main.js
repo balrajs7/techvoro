@@ -91,23 +91,4 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 500);
         });
     }
-    // Read More Toggle for Why Choose Us cards
-    const whyCards = document.querySelectorAll('.why-card');
-    
-    whyCards.forEach(card => {
-        card.addEventListener('click', () => {
-            const isExpanded = card.classList.toggle('active');
-            const btn = card.querySelector('.read-more-btn');
-            
-            // Update button text
-            if (btn) {
-                const btnText = btn.childNodes[0];
-                if (isExpanded) {
-                    btnText.textContent = "Show Less ";
-                } else {
-                    btnText.textContent = "Read More ";
-                }
-            }
-        });
-    });
 });
