@@ -639,11 +639,13 @@ ul {
     transition: transform 0.3s ease, box-shadow 0.3s ease, max-height 0.5s ease;
     display: flex;
     flex-direction: column;
+    cursor: pointer;
 }
 
 .why-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5), inset 0 0 15px rgba(16, 185, 129, 0.1);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.6), inset 0 0 20px rgba(16, 185, 129, 0.15);
+    background: rgba(255, 255, 255, 0.05);
 }
 
 .expanded-content {
