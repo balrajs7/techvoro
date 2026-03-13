@@ -292,8 +292,9 @@
             </div>
             <div class="why-us-image-container fade-in-up" data-delay="300">
                 <div class="interactive-shield-3d wrapper-3d" style="perspective: 1000px; transform-style: preserve-3d;">
-                    <img src="assets/images/why_us_shield.png" alt="Premium 3D Tech Shield" class="shield-img" style="max-width: 100%; border-radius: 20px; box-shadow: 0 0 60px rgba(16, 185, 129, 0.2), inset 0 0 20px rgba(255, 255, 255, 0.05); transition: transform 0.5s ease-out;">
+                    <img id="shield-trigger" src="assets/images/why_us_shield.png" alt="Premium 3D Tech Shield — Click to explore" class="shield-img" title="Click to explore our advantages" style="max-width: 100%; border-radius: 20px; box-shadow: 0 0 60px rgba(16, 185, 129, 0.2), inset 0 0 20px rgba(255, 255, 255, 0.05); transition: transform 0.5s ease-out, box-shadow 0.3s ease; cursor: pointer;">
                     <div class="glow-underneath shield-glow" style="bottom: -20px; background: radial-gradient(ellipse at center, rgba(16, 185, 129, 0.4) 0%, rgba(0,0,0,0) 70%);"></div>
+                    <p style="text-align:center; color: var(--color-accent); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 1rem; opacity: 0.8;">✦ Click Shield to Explore ✦</p>
                 </div>
             </div>
         </div>
@@ -384,6 +385,91 @@
             <p>&copy; 2026 Techvoro Digital Marketing Agency. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- ===== WHY US MODAL ===== -->
+    <div id="why-us-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Why Choose Techvoro">
+        <div class="modal-container">
+            <!-- Close Button -->
+            <button id="modal-close" class="modal-close" aria-label="Close">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="22" height="22"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+
+            <!-- Header -->
+            <div class="modal-header">
+                <div class="modal-badge">Our Advantage</div>
+                <h2>Why Choose <span class="accent">Techvoro</span></h2>
+                <p>We engineer digital supremacy. Here is why international corporate clients trust us.</p>
+            </div>
+
+            <!-- 4-Column Grid -->
+            <div class="modal-grid">
+                <!-- Pillar 1 -->
+                <div class="modal-card">
+                    <div class="modal-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <h3>Timely Execution</h3>
+                    <p>Agile sprint methodologies guarantee rigorous deployment timelines without compromising quality.</p>
+                    <ul class="modal-list">
+                        <li>Strict adherence to project milestones</li>
+                        <li>Transparent real-time progress updates</li>
+                        <li>Resource allocation optimization</li>
+                        <li>Final QA and performance testing protocols</li>
+                    </ul>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="modal-card">
+                    <div class="modal-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    </div>
+                    <h3>Unparalleled Aesthetics</h3>
+                    <p>We combine deep data insights with a hyper-focused luxury design standard.</p>
+                    <ul class="modal-list">
+                        <li>Custom typography and color palettes</li>
+                        <li>Visually stunning motion graphics</li>
+                        <li>Seamless user experience (UX) design</li>
+                        <li>Pixel-perfect front-end implementation</li>
+                    </ul>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="modal-card">
+                    <div class="modal-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                    </div>
+                    <h3>Data-Driven Precision</h3>
+                    <p>Strategic operations rely on market analytics and deep-level research for calculated results.</p>
+                    <ul class="modal-list">
+                        <li>Advanced user segmentation and targeting</li>
+                        <li>Multi-channel ROI tracking and analysis</li>
+                        <li>A/B testing for continuous optimization</li>
+                        <li>Data-backed content strategy development</li>
+                    </ul>
+                </div>
+
+                <!-- Pillar 4 -->
+                <div class="modal-card">
+                    <div class="modal-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h3>Elite Security</h3>
+                    <p>All architectures are fortified with military-grade encryption and strict data protection.</p>
+                    <ul class="modal-list">
+                        <li>Robust firewalls and DDoS protection</li>
+                        <li>Regular security audits and updates</li>
+                        <li>Compliance with industry standards</li>
+                        <li>Disaster recovery and backup solutions</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="modal-footer">
+                <a href="https://wa.me/917019044928?text=Hey%20Techvoro,%20I'd%20like%20to%20know%20more!" target="_blank" class="btn btn-primary">Get Started on WhatsApp</a>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>

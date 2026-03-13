@@ -91,4 +91,37 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 500);
         });
     }
+    // ===== Shield → Why-Us Modal =====
+    const shieldTrigger = document.getElementById('shield-trigger');
+    const modal         = document.getElementById('why-us-modal');
+    const modalClose    = document.getElementById('modal-close');
+
+    function openModal() {
+        modal.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+        // Focus trap: move focus inside modal
+        if (modalClose) modalClose.focus();
+    }
+
+    function closeModal() {
+        modal.classList.remove('is-open');
+        document.body.style.overflow = '';
+    }
+
+    if (shieldTrigger) shieldTrigger.addEventListener('click', openModal);
+    if (modalClose)    modalClose.addEventListener('click', closeModal);
+
+    // Close when clicking the backdrop (outside the container)
+    if (modal) {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+    }
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal && modal.classList.contains('is-open')) {
+            closeModal();
+        }
+    });
 });
